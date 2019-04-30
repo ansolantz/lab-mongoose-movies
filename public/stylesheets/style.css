@@ -11,7 +11,7 @@ a {
   margin-right: 20px;
   color: #fff;
   text-decoration: none;
-  padding: 4px 15px;
+  padding: 10px 20px;
   background-color: grey;
   border-radius: 6px;
 }
@@ -20,15 +20,18 @@ a {
   margin-right: 20px;
   color: #fff;
   text-decoration: none;
-  padding: 4px 15px;
+  padding: 10px 20px;
   background-color: red;
   border-radius: 6px;
 }
 
-.celebrity-title a {
-  font-size: 20px;
+.add-button {
+  margin-right: 20px;
+  color: #fff;
   text-decoration: none;
-  color: black;
+  padding: 10px 20px;
+  background-color: green;
+  border-radius: 6px;
 }
 
 .return-button {
@@ -39,4 +42,17 @@ a {
   background-color: aquamarine;
   border-radius: 5px;
   font-size: 20px;
+}
+
+.celebrity-title {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 10px;
+}
+
+.celebrity-title a {
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
 }

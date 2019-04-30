@@ -2,9 +2,11 @@
 
 {{#each allCelebrities}}
 
-<p class='celebrity-title'>
+<div class='celebrity-title'>
+  <a href="celebrities/details/{{this._id}}">{{this.name}}</a>
   <a href="celebrities/edit?_id={{this._id}}" class="edit-button">EDIT</a>
   <a href="celebrities/delete?_id={{this._id}}" class="delete-button">DELETE</a>
-  <a href="celebrities/details/{{this._id}}">{{this.name}}</a>
-</p>
+</div>
 {{/each}}
+
+<p><a href="celebrities/add" class="add-button">ADD A NEW CELEBRITY</a></p>

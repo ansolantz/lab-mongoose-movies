@@ -69,19 +69,23 @@ router.post('/edit', (req, res, next) => {
 router.get('/delete', (req, res, next) => {
   const { _id } = req.query;
 
-  Celebrity.deleteOne({ _id })
-    .then(() => res.redirect('/celebrities'))
+  Celebrity.findOne({ _id })
+    .then((celebrity) => res.render('celebrities-delete', { celebrity }))
     .catch((err) => console.log(err));
+
+  // Celebrity.deleteOne({ _id })
+  //   .then(() => res.redirect('/celebrities'))
+  //   .catch((err) => console.log(err));
 });
 
-// //  POST '/celebrities/delete'
-// router.post('/delete', (req, res, next) => {
-//   const { _id } = req.query;
+//  POST '/celebrities/delete' */ DELETING from form
+router.post('/delete', (req, res, next) => {
+  const { _id } = req.query;
 
-//   Celebrity.deleteOne({ _id })
-//   .then((celebrity) => res.redirect('/celebrities'))
-//   .catch((err) => console.log(err));
-// });
+  Celebrity.deleteOne({ _id })
+    .then((celebrity) => res.redirect('/celebrities'))
+    .catch((err) => console.log(err));
+});
 
 
 module.exports = router;

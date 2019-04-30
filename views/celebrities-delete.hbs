@@ -1,4 +1,5 @@
-<form action="/celebrities/delete?_id={{celebrity._id}}" method="DELETE">
+<h1>Do you want to delete this celebrity?</h1>
+<form action="/celebrities/delete?_id={{celebrity._id}}" method="POST">
 
   <label for="">Name:</label>
   <input type="text" name="name" value="{{celebrity.name}}">
@@ -10,6 +11,7 @@
   <input type="text" name="catchPhrase" value="{{celebrity.catchPhrase}}">
   <br>
 
-  <button class="delete-button" type="submit">DELETE</button>
+  <button class="delete-button" type="submit">YES DELETE</button>
+
 
 </form>
